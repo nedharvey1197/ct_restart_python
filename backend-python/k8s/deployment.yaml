@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clinical-trials-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: clinical-trials-api
+  template:
+    metadata:
+      labels:
+        app: clinical-trials-api
+    spec:
+      containers:
+      - name: api
+        image: clinical-trials-api:latest
+        ports:
+        - containerPort: 8000 

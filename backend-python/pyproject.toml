@@ -1,0 +1,66 @@
+[project]
+name = "clinical-trials-backend"
+version = "0.1.0"
+description = "Clinical Trials Analysis Backend"
+authors = [
+    {name = "Your Name"}
+]
+readme = "README.md"
+requires-python = "^3.10"
+dependencies = [
+    "fastapi (>=0.115.7,<0.116.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "motor (>=3.6.1,<4.0.0)",
+    "neo4j (>=5.27.0,<6.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "redis[hiredis] (>=5.2.1,<6.0.0)",
+    "beautifulsoup4 (>=4.12.3,<5.0.0)",
+    "pydantic (>=2.4.2,<3.0.0)",
+    "pydantic-settings (>=2.0.3,<3.0.0)"
+]
+
+# Future dependencies (commented out until needed):
+# scikit-learn = "^1.4.0"  # For ML analysis
+# pandas = "^2.2.0"        # For data processing
+# numpy = "^1.26.0"        # Required by scikit-learn
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-asyncio = "^0.25.2"
+httpx = "^0.28.1"
+pytest-cov = "^6.0.0"
+black = "^24.10.0"
+isort = "^5.13.2"
+
+[tool.poetry]
+name = "clinical-trials-backend"
+version = "0.1.0"
+description = "Clinical Trials Backend API"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.104.0"
+uvicorn = "^0.23.2"
+motor = "^3.3.1"
+redis = {version = "^5.2.1", extras = ["hiredis"]}
+beautifulsoup4 = "^4.12.3"
+pydantic = "^2.4.2"
+pydantic-settings = "^2.0.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+httpx = "^0.25.0"
+black = "^23.10.0"
+isort = "^5.12.0"
+mypy = "^1.6.1"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
