@@ -1,0 +1,1 @@
+"""Test package for the Clinical Trials application.""" 

@@ -1,0 +1,2440 @@
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts ==============================
+platform darwin -- Python 3.11.8, pytest-8.3.4, pluggy-1.5.0 -- /opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/nedharvey/ct_restart/ct_restart_python/backend-python
+configfile: pyproject.toml
+plugins: cov-6.0.0, asyncio-0.25.2, anyio-3.7.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=None
+collecting ... collected 42 items
+
+test_company_routes.py::test_create_company ERROR                        [  2%]
+test_company_routes.py::test_get_company ERROR                           [  4%]
+test_company_routes.py::test_update_company ERROR                        [  7%]
+test_company_routes.py::test_delete_company ERROR                        [  9%]
+test_company_routes.py::test_list_companies ERROR                        [ 11%]
+test_company_routes.py::test_get_current_company ERROR                   [ 14%]
+test_company_routes.py::test_invalid_company_schema ERROR                [ 16%]
+test_company_routes.py::test_company_migration ERROR                     [ 19%]
+test_company_routes.py::test_company_validation_rules ERROR              [ 21%]
+test_company_routes.py::test_company_relationships ERROR                 [ 23%]
+test_company_routes.py::test_error_handling ERROR                        [ 26%]
+test_company_routes.py::test_company_trial_integration ERROR             [ 28%]
+test_company_routes.py::test_company_trial_relationship_sync ERROR       [ 30%]
+test_company_routes.py::test_schema_validation_performance FAILED        [ 33%]
+test_company_routes.py::test_schema_migration_performance ERROR          [ 35%]
+test_company_routes.py::test_concurrent_schema_operations FAILED         [ 38%]
+test_company_routes.py::test_company_routes ERROR                        [ 40%]
+test_company_service.py::test_create_company ERROR                       [ 42%]
+test_company_service.py::test_get_company ERROR                          [ 45%]
+test_integration.py::test_trial_flow ERROR                               [ 47%]
+test_integration.py::test_cache_invalidation ERROR                       [ 50%]
+test_trial_analysis.py::test_save_company_trials ERROR                   [ 52%]
+test_trial_analysis.py::test_get_company_trials ERROR                    [ 54%]
+test_trial_analysis.py::test_get_trial_details ERROR                     [ 57%]
+test_trial_analysis.py::test_save_trial_analysis ERROR                   [ 59%]
+test_trial_analysis.py::test_update_trial_analysis ERROR                 [ 61%]
+test_trial_analytics_service.py::test_analyze_batch FAILED               [ 64%]
+test_trial_routes.py::test_analyze_trials ERROR                          [ 66%]
+test_trial_routes.py::test_analyze_trials_background ERROR               [ 69%]
+test_trial_routes.py::test_get_trial ERROR                               [ 71%]
+test_trial_routes.py::test_invalid_trial_schema ERROR                    [ 73%]
+test_trial_routes.py::test_trial_migration ERROR                         [ 76%]
+test_trial_routes.py::test_cache_handling ERROR                          [ 78%]
+test_trial_routes.py::test_error_handling ERROR                          [ 80%]
+test_trial_routes.py::test_trial_company_integration ERROR               [ 83%]
+test_trial_routes.py::test_trial_schema_performance FAILED               [ 85%]
+test_trial_routes.py::test_concurrent_trial_operations FAILED            [ 88%]
+test_trial_routes.py::test_get_trial_analytics ERROR                     [ 90%]
+test_trial_routes.py::test_get_trial_details ERROR                       [ 92%]
+test_trial_routes.py::test_update_trial_analytics ERROR                  [ 95%]
+test_trial_routes.py::test_get_company_trials ERROR                      [ 97%]
+test_trial_routes.py::test_save_company_trials ERROR                     [100%]
+
+==================================== ERRORS ====================================
+____________________ ERROR at setup of test_create_company _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+______________________ ERROR at setup of test_get_company ______________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_update_company _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_delete_company _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_list_companies _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+__________________ ERROR at setup of test_get_current_company __________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+________________ ERROR at setup of test_invalid_company_schema _________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+___________________ ERROR at setup of test_company_migration ___________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_______________ ERROR at setup of test_company_validation_rules ________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_________________ ERROR at setup of test_company_relationships _________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_error_handling _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_______________ ERROR at setup of test_company_trial_integration _______________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________ ERROR at setup of test_company_trial_relationship_sync ____________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_____________ ERROR at setup of test_schema_migration_performance ______________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_company_routes _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_create_company _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+______________________ ERROR at setup of test_get_company ______________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+______________________ ERROR at setup of test_trial_flow _______________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+__________________ ERROR at setup of test_cache_invalidation ___________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+__________________ ERROR at setup of test_save_company_trials __________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+__________________ ERROR at setup of test_get_company_trials ___________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+___________________ ERROR at setup of test_get_trial_details ___________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+__________________ ERROR at setup of test_save_trial_analysis __________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_________________ ERROR at setup of test_update_trial_analysis _________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_analyze_trials _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_______________ ERROR at setup of test_analyze_trials_background _______________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_______________________ ERROR at setup of test_get_trial _______________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_________________ ERROR at setup of test_invalid_trial_schema __________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_trial_migration ____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_cache_handling _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+____________________ ERROR at setup of test_error_handling _____________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+_______________ ERROR at setup of test_trial_company_integration _______________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+__________________ ERROR at setup of test_get_trial_analytics __________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+___________________ ERROR at setup of test_get_trial_details ___________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+________________ ERROR at setup of test_update_trial_analytics _________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+__________________ ERROR at setup of test_get_company_trials ___________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+__________________ ERROR at setup of test_save_company_trials __________________
+
+    @pytest.fixture(scope="session")
+    def test_client():
+>       with TestClient(app) as client:
+
+conftest.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.TestClient object at 0x110cbd810>
+app = <fastapi.applications.FastAPI object at 0x110c1c490>
+base_url = 'http://testserver', raise_server_exceptions = True, root_path = ''
+backend = 'asyncio', backend_options = None, cookies = None
+headers = {'user-agent': 'testclient'}
+
+    def __init__(
+        self,
+        app: ASGIApp,
+        base_url: str = "http://testserver",
+        raise_server_exceptions: bool = True,
+        root_path: str = "",
+        backend: str = "asyncio",
+        backend_options: typing.Optional[typing.Dict[str, typing.Any]] = None,
+        cookies: httpx._client.CookieTypes = None,
+        headers: typing.Dict[str, str] = None,
+    ) -> None:
+        self.async_backend = _AsyncBackend(
+            backend=backend, backend_options=backend_options or {}
+        )
+        if _is_asgi3(app):
+            app = typing.cast(ASGI3App, app)
+            asgi_app = app
+        else:
+            app = typing.cast(ASGI2App, app)  # type: ignore[assignment]
+            asgi_app = _WrapASGI2(app)  # type: ignore[arg-type]
+        self.app = asgi_app
+        self.app_state: typing.Dict[str, typing.Any] = {}
+        transport = _TestClientTransport(
+            self.app,
+            portal_factory=self._portal_factory,
+            raise_server_exceptions=raise_server_exceptions,
+            root_path=root_path,
+            app_state=self.app_state,
+        )
+        if headers is None:
+            headers = {}
+        headers.setdefault("user-agent", "testclient")
+>       super().__init__(
+            app=self.app,
+            base_url=base_url,
+            headers=headers,
+            transport=transport,
+            follow_redirects=True,
+            cookies=cookies,
+        )
+E       TypeError: Client.__init__() got an unexpected keyword argument 'app'
+
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/testclient.py:399: TypeError
+=================================== FAILURES ===================================
+______________________ test_schema_validation_performance ______________________
+
+    @pytest.mark.asyncio
+    async def test_schema_validation_performance():
+        """Test performance of schema validation operations."""
+        # Create test data
+        test_companies = [
+            {
+                "name": f"Performance Test Company {i}",
+                "company_identifiers": {"website": f"https://perf-test-{i}.com"},
+                "profile": {
+                    "size": "Large",
+                    "therapeutic_areas": ["Oncology", "Neurology"]
+                }
+            } for i in range(10)  # Test with 10 companies
+        ]
+    
+        # Measure validation time
+        start_time = time.time()
+        context = await SchemaService.get_collection_context("companies")
+    
+        validation_times = []
+        for company in test_companies:
+            validation_start = time.time()
+>           is_valid = await SchemaService.validate_document("companies", company, context)
+
+test_company_routes.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../services/schema_service.py:32: in validate_document
+    return schema_manager.validate_data(
+../system_specs/schema_manager.py:186: in validate_data
+    schema = self.get_schema(name, context, version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <app.system_specs.schema_manager.SchemaManager object at 0x110b6ed50>
+name = 'companies', context = <SchemaContext.CURRENT: 'current'>, version = None
+
+    def get_schema(
+        self,
+        name: str,
+        context: Optional[SchemaContext] = None,
+        version: Optional[SchemaVersion] = None
+    ) -> Type[BaseModel]:
+        """Get schema by name and optionally context or version"""
+        if name not in self._schemas:
+>           raise ValueError(f"Schema {name} not registered")
+E           ValueError: Schema companies not registered
+
+../system_specs/schema_manager.py:130: ValueError
+----------------------------- Captured stderr call -----------------------------
+2025-01-31 22:45:17,540 - clinical_trials - INFO - No client exists, connecting...
+2025-01-31 22:45:17,540 - clinical_trials - INFO - Connecting to MongoDB...
+2025-01-31 22:45:17,557 - clinical_trials - INFO - Successfully connected to MongoDB
+2025-01-31 22:45:17,557 - clinical_trials - INFO - Getting collection: companies
+2025-01-31 22:45:17,558 - clinical_trials - INFO - Operation completed for collection: companies
+2025-01-31 22:45:17,558 - clinical_trials - INFO - Exiting collection context for: companies
+------------------------------ Captured log call -------------------------------
+INFO     clinical_trials:database.py:42 No client exists, connecting...
+INFO     clinical_trials:database.py:63 Connecting to MongoDB...
+INFO     clinical_trials:database.py:76 Successfully connected to MongoDB
+INFO     clinical_trials:database.py:45 Getting collection: companies
+INFO     clinical_trials:database.py:49 Operation completed for collection: companies
+INFO     clinical_trials:database.py:57 Exiting collection context for: companies
+______________________ test_concurrent_schema_operations _______________________
+
+    @pytest.mark.asyncio
+    async def test_concurrent_schema_operations():
+        """Test performance of concurrent schema validation and migration."""
+        # Create mixed test data (both current and legacy format)
+        test_data = [
+            # Current format
+            {
+                "name": "Concurrent Test Company 1",
+                "company_identifiers": {"website": "https://concurrent-1.com"},
+                "profile": {"size": "Large", "therapeutic_areas": ["Oncology"]}
+            },
+            # Legacy format
+            {
+                "companyName": "Legacy Concurrent Company",
+                "companyWebsite": "https://legacy-concurrent.com",
+                "companySize": "Medium",
+                "therapeuticAreas": ["Cardiology"]
+            }
+        ]
+    
+        # Test concurrent operations
+        start_time = time.time()
+    
+        async def process_company(company_data):
+            context = await SchemaService.get_collection_context("companies")
+            if await SchemaService.validate_document("companies", company_data, context):
+                return company_data
+            else:
+                return await SchemaService.migrate_document(
+                    collection_name="companies",
+                    document=company_data,
+                    from_context=SchemaContext.LEGACY,
+                    to_context=context
+                )
+    
+        tasks = [process_company(company) for company in test_data]
+>       results = await asyncio.gather(*tasks)
+
+test_company_routes.py:455: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_company_routes.py:444: in process_company
+    if await SchemaService.validate_document("companies", company_data, context):
+../services/schema_service.py:32: in validate_document
+    return schema_manager.validate_data(
+../system_specs/schema_manager.py:186: in validate_data
+    schema = self.get_schema(name, context, version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <app.system_specs.schema_manager.SchemaManager object at 0x110b6ed50>
+name = 'companies', context = <SchemaContext.CURRENT: 'current'>, version = None
+
+    def get_schema(
+        self,
+        name: str,
+        context: Optional[SchemaContext] = None,
+        version: Optional[SchemaVersion] = None
+    ) -> Type[BaseModel]:
+        """Get schema by name and optionally context or version"""
+        if name not in self._schemas:
+>           raise ValueError(f"Schema {name} not registered")
+E           ValueError: Schema companies not registered
+
+../system_specs/schema_manager.py:130: ValueError
+----------------------------- Captured stderr call -----------------------------
+2025-01-31 22:45:17,573 - clinical_trials - INFO - Getting collection: companies
+2025-01-31 22:45:17,573 - clinical_trials - INFO - Getting collection: companies
+2025-01-31 22:45:17,574 - clinical_trials - INFO - Operation completed for collection: companies
+2025-01-31 22:45:17,574 - clinical_trials - INFO - Exiting collection context for: companies
+------------------------------ Captured log call -------------------------------
+INFO     clinical_trials:database.py:45 Getting collection: companies
+INFO     clinical_trials:database.py:45 Getting collection: companies
+INFO     clinical_trials:database.py:49 Operation completed for collection: companies
+INFO     clinical_trials:database.py:57 Exiting collection context for: companies
+______________________________ test_analyze_batch ______________________________
+
+    @pytest.mark.asyncio
+    async def test_analyze_batch():
+        """Test batch analysis of trials."""
+        # Get sample trials
+        trials = await get_sample_trials()
+>       assert trials, "No sample trials found"
+E       AssertionError: No sample trials found
+E       assert []
+
+test_trial_analytics_service.py:20: AssertionError
+----------------------------- Captured stderr call -----------------------------
+2025-01-31 22:45:17,677 - clinical_trials - INFO - Operation completed for collection: companies
+2025-01-31 22:45:17,677 - clinical_trials - INFO - Exiting collection context for: companies
+2025-01-31 22:45:17,682 - app.tests.fixtures.load_real_data - WARNING - No sample trials found in database
+------------------------------ Captured log call -------------------------------
+INFO     clinical_trials:database.py:49 Operation completed for collection: companies
+INFO     clinical_trials:database.py:57 Exiting collection context for: companies
+WARNING  app.tests.fixtures.load_real_data:load_real_data.py:22 No sample trials found in database
+________________________ test_trial_schema_performance _________________________
+
+    @pytest.mark.asyncio
+    async def test_trial_schema_performance():
+        """Test performance of trial schema operations with company integration."""
+        # Create test company
+>       company_response = await test_client.post("/api/companies", json={
+            "name": "Trial Performance Company",
+            "company_identifiers": {"website": "https://trial-perf.com"},
+            "profile": {"size": "Medium", "therapeutic_areas": ["Oncology"]}
+        })
+E       NameError: name 'test_client' is not defined
+
+test_trial_routes.py:287: NameError
+_______________________ test_concurrent_trial_operations _______________________
+
+    @pytest.mark.asyncio
+    async def test_concurrent_trial_operations():
+        """Test concurrent trial operations with company integration."""
+        # Setup test company
+>       company_response = await test_client.post("/api/companies", json={
+            "name": "Concurrent Trial Company",
+            "company_identifiers": {"website": "https://concurrent-trials.com"},
+            "profile": {"size": "Large", "therapeutic_areas": ["Oncology"]}
+        })
+E       NameError: name 'test_client' is not defined
+
+test_trial_routes.py:345: NameError
+=============================== warnings summary ===============================
+../../../../../../../opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/formparsers.py:10
+  /opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/starlette/formparsers.py:10: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_company_routes.py::test_schema_validation_performance - ValueErro...
+FAILED test_company_routes.py::test_concurrent_schema_operations - ValueError...
+FAILED test_trial_analytics_service.py::test_analyze_batch - AssertionError: ...
+FAILED test_trial_routes.py::test_trial_schema_performance - NameError: name ...
+FAILED test_trial_routes.py::test_concurrent_trial_operations - NameError: na...
+ERROR test_company_routes.py::test_create_company - TypeError: Client.__init_...
+ERROR test_company_routes.py::test_get_company - TypeError: Client.__init__()...
+ERROR test_company_routes.py::test_update_company - TypeError: Client.__init_...
+ERROR test_company_routes.py::test_delete_company - TypeError: Client.__init_...
+ERROR test_company_routes.py::test_list_companies - TypeError: Client.__init_...
+ERROR test_company_routes.py::test_get_current_company - TypeError: Client.__...
+ERROR test_company_routes.py::test_invalid_company_schema - TypeError: Client...
+ERROR test_company_routes.py::test_company_migration - TypeError: Client.__in...
+ERROR test_company_routes.py::test_company_validation_rules - TypeError: Clie...
+ERROR test_company_routes.py::test_company_relationships - TypeError: Client....
+ERROR test_company_routes.py::test_error_handling - TypeError: Client.__init_...
+ERROR test_company_routes.py::test_company_trial_integration - TypeError: Cli...
+ERROR test_company_routes.py::test_company_trial_relationship_sync - TypeErro...
+ERROR test_company_routes.py::test_schema_migration_performance - TypeError: ...
+ERROR test_company_routes.py::test_company_routes - TypeError: Client.__init_...
+ERROR test_company_service.py::test_create_company - TypeError: Client.__init...
+ERROR test_company_service.py::test_get_company - TypeError: Client.__init__(...
+ERROR test_integration.py::test_trial_flow - TypeError: Client.__init__() got...
+ERROR test_integration.py::test_cache_invalidation - TypeError: Client.__init...
+ERROR test_trial_analysis.py::test_save_company_trials - TypeError: Client.__...
+ERROR test_trial_analysis.py::test_get_company_trials - TypeError: Client.__i...
+ERROR test_trial_analysis.py::test_get_trial_details - TypeError: Client.__in...
+ERROR test_trial_analysis.py::test_save_trial_analysis - TypeError: Client.__...
+ERROR test_trial_analysis.py::test_update_trial_analysis - TypeError: Client....
+ERROR test_trial_routes.py::test_analyze_trials - TypeError: Client.__init__(...
+ERROR test_trial_routes.py::test_analyze_trials_background - TypeError: Clien...
+ERROR test_trial_routes.py::test_get_trial - TypeError: Client.__init__() got...
+ERROR test_trial_routes.py::test_invalid_trial_schema - TypeError: Client.__i...
+ERROR test_trial_routes.py::test_trial_migration - TypeError: Client.__init__...
+ERROR test_trial_routes.py::test_cache_handling - TypeError: Client.__init__(...
+ERROR test_trial_routes.py::test_error_handling - TypeError: Client.__init__(...
+ERROR test_trial_routes.py::test_trial_company_integration - TypeError: Clien...
+ERROR test_trial_routes.py::test_get_trial_analytics - TypeError: Client.__in...
+ERROR test_trial_routes.py::test_get_trial_details - TypeError: Client.__init...
+ERROR test_trial_routes.py::test_update_trial_analytics - TypeError: Client._...
+ERROR test_trial_routes.py::test_get_company_trials - TypeError: Client.__ini...
+ERROR test_trial_routes.py::test_save_company_trials - TypeError: Client.__in...
+=================== 5 failed, 1 warning, 37 errors in 0.46s ====================
