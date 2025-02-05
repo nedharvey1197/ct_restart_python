@@ -1,0 +1,29 @@
+/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/site-packages/pytest_asyncio/plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts ==============================
+platform darwin -- Python 3.12.8, pytest-8.3.4, pluggy-1.5.0
+rootdir: /Users/nedharvey/ct_restart/ct_restart_python/backend-python
+configfile: pyproject.toml
+testpaths: app/tests
+plugins: cov-6.0.0, asyncio-0.25.3, anyio-3.7.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=None
+collected 40 items / 1 error
+
+==================================== ERRORS ====================================
+_____ ERROR collecting app/tests/future_concepts/test_advanced_analysis.py _____
+ImportError while importing test module '/Users/nedharvey/ct_restart/ct_restart_python/backend-python/app/tests/future_concepts/test_advanced_analysis.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+app/tests/future_concepts/test_advanced_analysis.py:10: in <module>
+    from app.services.future_concepts.future_trial_analysis import FutureAdvancedTrialAnalyzer
+app/services/future_concepts/future_trial_analysis.py:4: in <module>
+    from ..models.trial import ClinicalTrial
+E   ModuleNotFoundError: No module named 'app.services.models'
+=========================== short test summary info ============================
+ERROR app/tests/future_concepts/test_advanced_analysis.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.10s ===============================

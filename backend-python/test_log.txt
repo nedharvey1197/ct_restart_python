@@ -1,0 +1,74 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.8, pytest-8.3.4, pluggy-1.5.0 -- /opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/nedharvey/ct_restart/ct_restart_python/backend-python
+configfile: pyproject.toml
+plugins: cov-6.0.0, asyncio-0.25.2, anyio-3.7.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=None
+collecting ... collected 41 items
+
+app/tests/test_company_routes.py::test_create_company ERROR              [  2%]
+app/tests/test_company_routes.py::test_get_company ERROR                 [  4%]
+app/tests/test_company_routes.py::test_update_company ERROR              [  7%]
+app/tests/test_company_routes.py::test_delete_company ERROR              [  9%]
+app/tests/test_company_routes.py::test_list_companies ERROR              [ 12%]
+
+==================================== ERRORS ====================================
+____________________ ERROR at setup of test_create_company _____________________
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:329: in _asyncgen_fixture_wrapper
+    result = event_loop.run_until_complete(setup_task)
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/asyncio/base_events.py:654: in run_until_complete
+    return future.result()
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:324: in setup
+    res = await gen_obj.__anext__()  # type: ignore[union-attr]
+app/tests/conftest.py:32: in test_client
+    async with AsyncClient(app=app, base_url="http://test") as client:
+E   TypeError: AsyncClient.__init__() got an unexpected keyword argument 'app'
+______________________ ERROR at setup of test_get_company ______________________
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:329: in _asyncgen_fixture_wrapper
+    result = event_loop.run_until_complete(setup_task)
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/asyncio/base_events.py:654: in run_until_complete
+    return future.result()
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:324: in setup
+    res = await gen_obj.__anext__()  # type: ignore[union-attr]
+app/tests/conftest.py:32: in test_client
+    async with AsyncClient(app=app, base_url="http://test") as client:
+E   TypeError: AsyncClient.__init__() got an unexpected keyword argument 'app'
+____________________ ERROR at setup of test_update_company _____________________
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:329: in _asyncgen_fixture_wrapper
+    result = event_loop.run_until_complete(setup_task)
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/asyncio/base_events.py:654: in run_until_complete
+    return future.result()
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:324: in setup
+    res = await gen_obj.__anext__()  # type: ignore[union-attr]
+app/tests/conftest.py:32: in test_client
+    async with AsyncClient(app=app, base_url="http://test") as client:
+E   TypeError: AsyncClient.__init__() got an unexpected keyword argument 'app'
+____________________ ERROR at setup of test_delete_company _____________________
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:329: in _asyncgen_fixture_wrapper
+    result = event_loop.run_until_complete(setup_task)
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/asyncio/base_events.py:654: in run_until_complete
+    return future.result()
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:324: in setup
+    res = await gen_obj.__anext__()  # type: ignore[union-attr]
+app/tests/conftest.py:32: in test_client
+    async with AsyncClient(app=app, base_url="http://test") as client:
+E   TypeError: AsyncClient.__init__() got an unexpected keyword argument 'app'
+____________________ ERROR at setup of test_list_companies _____________________
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:329: in _asyncgen_fixture_wrapper
+    result = event_loop.run_until_complete(setup_task)
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/asyncio/base_events.py:654: in run_until_complete
+    return future.result()
+/opt/homebrew/Caskroom/miniconda/base/envs/clinical_v2/lib/python3.11/site-packages/pytest_asyncio/plugin.py:324: in setup
+    res = await gen_obj.__anext__()  # type: ignore[union-attr]
+app/tests/conftest.py:32: in test_client
+    async with AsyncClient(app=app, base_url="http://test") as client:
+E   TypeError: AsyncClient.__init__() got an unexpected keyword argument 'app'
+=========================== short test summary info ============================
+ERROR app/tests/test_company_routes.py::test_create_company - TypeError: Asyn...
+ERROR app/tests/test_company_routes.py::test_get_company - TypeError: AsyncCl...
+ERROR app/tests/test_company_routes.py::test_update_company - TypeError: Asyn...
+ERROR app/tests/test_company_routes.py::test_delete_company - TypeError: Asyn...
+ERROR app/tests/test_company_routes.py::test_list_companies - TypeError: Asyn...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 5 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 warning, 5 errors in 0.19s =========================

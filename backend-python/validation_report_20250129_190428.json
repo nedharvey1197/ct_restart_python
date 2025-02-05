@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-01-29 19:04:27.977653",
+  "summary": {
+    "trials": 0,
+    "companies": 2,
+    "issues_found": 3
+  },
+  "detailed_results": {
+    "timestamp": "2025-01-29 19:04:27.977653",
+    "trials": {
+      "total_count": 0,
+      "sample_validated": 0,
+      "fields_present": {
+        "nct_id": 0,
+        "title": 0,
+        "status": 0
+      },
+      "schema_compliance": {
+        "compliant": 0,
+        "non_compliant": 0,
+        "errors": []
+      }
+    },
+    "companies": {
+      "total_count": 2,
+      "sample_validated": 2,
+      "fields_present": {
+        "name": 0.0,
+        "company_identifiers": 0.0,
+        "status": 0.0
+      },
+      "schema_compliance": {
+        "compliant": 0,
+        "non_compliant": 2,
+        "errors": [
+          "1 validation error for EnhancedCompany\nname\n  Field required [type=missing, input_value={'_id': ObjectId('678d6bb...ls': True, 'trials': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.10/v/missing",
+          "1 validation error for EnhancedCompany\nname\n  Field required [type=missing, input_value={'_id': ObjectId('678d707...d8f1c55b88dadfdefebd')}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.10/v/missing"
+        ]
+      }
+    },
+    "relationships": {
+      "company_relationships": {
+        "total_with_relationships": 0,
+        "valid_structure": 0,
+        "invalid_structure": 0,
+        "errors": []
+      },
+      "trial_relationships": {
+        "total_with_relationships": 0,
+        "valid_structure": 0,
+        "invalid_structure": 0,
+        "errors": []
+      },
+      "orphaned_references": {
+        "company_orphans": 0,
+        "trial_orphans": 0,
+        "details": []
+      },
+      "integrity_check": {
+        "bidirectional_valid": true,
+        "no_self_references": true,
+        "valid_relationship_types": true
+      }
+    },
+    "data_integrity": {
+      "duplicate_trials": {
+        "duplicate_count": 0,
+        "details": []
+      },
+      "duplicate_companies": {
+        "duplicate_count": 1,
+        "details": [
+          {
+            "name": null,
+            "count": 2,
+            "ids": [
+              "678d6bb63030fba2e966e080",
+              "678d707365a04c38597ad2c2"
+            ]
+          }
+        ]
+      },
+      "invalid_references": {
+        "invalid_trial_refs": 0,
+        "invalid_company_refs": 0,
+        "details": []
+      }
+    }
+  },
+  "issues": {
+    "critical": [],
+    "warnings": [],
+    "info": []
+  },
+  "recommendations": [],
+  "safe_to_proceed": true
+}

@@ -1,12 +1,14 @@
+from app.system_specs.schema_manager import schema_manager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .config.database import MongoDB
 from .config.settings import get_settings
 from .config.logging_config import setup_logging
 from .middleware.logging import logging_middleware
-from .routes import company_routes, trial_routes
+from .routes import company_routes, trial_routes, schema_routes
 from .services.cache_service import CacheService
 import logging
+import asyncio
 
 # Configure detailed logging
 logging.basicConfig(
@@ -46,6 +48,7 @@ async def startup_db_client():
     logger.info("Starting up FastAPI application")
     try:
         await MongoDB.connect()
+        await schema_manager.initialize_schemas()
     except Exception as e:
         logger.error(f"Failed to connect to MongoDB: {e}")
         raise
@@ -68,6 +71,7 @@ async def health_check():
 # Include current production routers
 app.include_router(company_routes.router, prefix=settings.API_V1_PREFIX)
 app.include_router(trial_routes.router, prefix=settings.API_V1_PREFIX)
+app.include_router(schema_routes.router, prefix=settings.API_V1_PREFIX)
 
 # Future advanced analysis endpoints (commented out until ready for use)
 # app.include_router(trial_routes.future_router, prefix=settings.API_V1_PREFIX)

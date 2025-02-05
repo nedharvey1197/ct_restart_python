@@ -1,3 +1,17 @@
+"""
+Trial Analysis Model
+
+Current Purpose:
+- Defines the structure of trial analysis data
+- Includes metrics, insights, and recommendations
+- Supports future KG integration
+
+KG Schema Mapping:
+- Maps to DS.SuccessCriteria
+- Relates to SG.TrendPattern
+- Connects to KI.MarketIntelligence
+"""
+
 from pydantic import BaseModel
 from typing import Dict, Any, List, Optional
 from datetime import datetime
