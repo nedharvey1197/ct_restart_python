@@ -12,6 +12,10 @@ packages = [
     { include = "app" }
 ]
 
+[tool.poetry.scripts]
+generate-client = "scripts.generate_client:main"
+
+
 [tool.poetry.dependencies]
 python = "^3.11"
 fastapi = "^0.115.8"  # Updated to the latest version you installed
@@ -35,6 +39,7 @@ typing_extensions = "^4.12.2"
 asgi-lifespan = "^2.1.0"
 requests = "^2.32.3"
 openai = "^1.61.0"
+clinical-trials-gov-rest-api-client = {path = "ct_client"}
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
@@ -44,6 +49,7 @@ pytest-cov = "^6.0.0"
 black = "^24.10.0"
 isort = "^5.13.2"
 mypy = "^1.6.1"
+openapi-python-client = "^0.23.1"
 
 [tool.pytest.ini_options]
 log_cli = true

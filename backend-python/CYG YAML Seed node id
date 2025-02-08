@@ -1,0 +1,101 @@
+// 1. Fundamental Data Types
+MERGE (n:DataType {name: "string"})
+MERGE (n:DataType {name: "integer"})
+MERGE (n:DataType {name: "boolean"})
+MERGE (n:DataType {name: "object"})
+MERGE (n:DataType {name: "array"})
+MERGE (n:DataType {name: "markup"})
+
+// 2. Enumerations
+MERGE (enum:Enum {name: "OrgStudyIdType"})
+MERGE (enum:Enum {name: "SecondaryIdType"})
+MERGE (enum:Enum {name: "AgencyClass"})
+MERGE (enum:Enum {name: "ExpandedAccessStatus"})
+MERGE (enum:Enum {name: "DateType"})
+MERGE (enum:Enum {name: "ResponsiblePartyType"})
+MERGE (enum:Enum {name: "PrimaryPurpose"})
+MERGE (enum:Enum {name: "ObservationalModel"})
+MERGE (enum:Enum {name: "DesignTimePerspective"})
+MERGE (enum:Enum {name: "BioSpecRetention"})
+MERGE (enum:Enum {name: "EnrollmentType"})
+MERGE (enum:Enum {name: "ArmGroupType"})
+MERGE (enum:Enum {name: "InterventionType"})
+MERGE (enum:Enum {name: "Phase"})
+MERGE (enum:Enum {name: "DesignAllocation"})
+MERGE (enum:Enum {name: "InterventionalAssignment"})
+MERGE (enum:Enum {name: "RecruitmentStatus"})
+MERGE (enum:Enum {name: "ReferenceType"})
+MERGE (enum:Enum {name: "MeasureParam"})
+MERGE (enum:Enum {name: "MeasureDispersionType"})
+MERGE (enum:Enum {name: "OutcomeMeasureType"})
+MERGE (enum:Enum {name: "EventAssessment"})
+MERGE (enum:Enum {name: "AgreementRestrictionType"})
+MERGE (enum:Enum {name: "BrowseLeafRelevance"})
+MERGE (enum:Enum {name: "DesignMasking"})
+MERGE (enum:Enum {name: "WhoMasked"})
+MERGE (enum:Enum {name: "AnalysisDispersionType"})
+MERGE (enum:Enum {name: "ConfidenceIntervalNumSides"})
+MERGE (enum:Enum {name: "NonInferiorityType"})
+MERGE (enum:Enum {name: "UnpostedEventType"})
+MERGE (enum:Enum {name: "ViolationEventType"})
+
+// 3. Predefined Structures
+MERGE (s:SchemaElement {name: "DateStruct"})
+MERGE (s:SchemaElement {name: "PartialDateStruct"})
+MERGE (s:SchemaElement {name: "GeoPoint"})
+MERGE (s:SchemaElement {name: "FlowPeriod"})
+MERGE (s:SchemaElement {name: "StudyList"})
+MERGE (s:SchemaElement {name: "BaselineCharacteristicsModule"})
+MERGE (s:SchemaElement {name: "AdverseEventsModule"})
+MERGE (s:SchemaElement {name: "ParticipantFlowModule"})
+MERGE (s:SchemaElement {name: "LargeDocumentModule"})
+MERGE (s:SchemaElement {name: "BrowseModule"})
+
+// 4. Search Categories
+MERGE (sc:SearchCategory {name: "BasicSearch"})
+MERGE (sc:SearchCategory {name: "ConditionSearch"})
+MERGE (sc:SearchCategory {name: "InterventionSearch"})
+MERGE (sc:SearchCategory {name: "LocationSearch"})
+MERGE (sc:SearchCategory {name: "StudyResultsSearch"})
+
+// 5. Search Areas and Fields for BasicSearch
+MERGE (sa:SearchArea {name: "BasicSearch"})
+MERGE (f1:Field {name: "BriefTitle", type: "string", weight: 0.89})
+MERGE (f2:Field {name: "Phase", type: "enum", weight: 0.65})
+MERGE (sa)-[:CONTAINS]->(f1)
+MERGE (sa)-[:CONTAINS]->(f2)
+
+// 6. Search Areas and Fields for ConditionSearch
+MERGE (sa:SearchArea {name: "ConditionSearch"})
+MERGE (f1:Field {name: "Condition", type: "string", weight: 0.95})
+MERGE (f2:Field {name: "BriefTitle", type: "string", weight: 0.6})
+MERGE (sa)-[:CONTAINS]->(f1)
+MERGE (sa)-[:CONTAINS]->(f2)
+
+// 7. Search Areas and Fields for InterventionSearch
+MERGE (sa:SearchArea {name: "InterventionSearch"})
+MERGE (f1:Field {name: "InterventionName", type: "string", weight: 0.95})
+MERGE (f2:Field {name: "InterventionType", type: "enum", weight: 0.85})
+MERGE (sa)-[:CONTAINS]->(f1)
+MERGE (sa)-[:CONTAINS]->(f2)
+
+// 8. Search Areas and Fields for LocationSearch
+MERGE (sa:SearchArea {name: "LocationSearch"})
+MERGE (f1:Field {name: "LocationCity", type: "string", weight: 0.75})
+MERGE (f2:Field {name: "LocationState", type: "string", weight: 0.7})
+MERGE (sa)-[:CONTAINS]->(f1)
+MERGE (sa)-[:CONTAINS]->(f2)
+
+// 9. Search Areas and Fields for StudyResultsSearch
+MERGE (sa:SearchArea {name: "StudyResultsSearch"})
+MERGE (f1:Field {name: "StudyOutcome", type: "string", weight: 0.9})
+MERGE (f2:Field {name: "StudyCompletionDate", type: "string", weight: 0.85})
+MERGE (sa)-[:CONTAINS]->(f1)
+MERGE (sa)-[:CONTAINS]->(f2)
+
+// 10. Relationships Between Search Categories and Areas
+MERGE (sc:SearchCategory {name: "BasicSearch"})-[:CONTAINS]->(:SearchArea {name: "BasicSearch"})
+MERGE (sc:SearchCategory {name: "ConditionSearch"})-[:CONTAINS]->(:SearchArea {name: "ConditionSearch"})
+MERGE (sc:SearchCategory {name: "InterventionSearch"})-[:CONTAINS]->(:SearchArea {name: "InterventionSearch"})
+MERGE (sc:SearchCategory {name: "LocationSearch"})-[:CONTAINS]->(:SearchArea {name: "LocationSearch"})
+MERGE (sc:SearchCategory {name: "StudyResultsSearch"})-[:CONTAINS]->(:SearchArea {name: "StudyResultsSearch"})

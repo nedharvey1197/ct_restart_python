@@ -5,8 +5,10 @@ from .config.database import MongoDB
 from .config.settings import get_settings
 from .config.logging_config import setup_logging
 from .middleware.logging import logging_middleware
-from .routes import company_routes, trial_routes, schema_routes
-from .services.cache_service import CacheService
+from .routes import company_routes, trial_routes, schema_routes, chat_copilot_routes, gpt_copilot_routes
+from .services.cache_service import CacheService# Import the new router
+from .services.chat_copilot_services import refine_query, fetch_trials
+
 import logging
 import asyncio
 
@@ -72,6 +74,9 @@ async def health_check():
 app.include_router(company_routes.router, prefix=settings.API_V1_PREFIX)
 app.include_router(trial_routes.router, prefix=settings.API_V1_PREFIX)
 app.include_router(schema_routes.router, prefix=settings.API_V1_PREFIX)
+app.include_router(chat_copilot_routes.router, prefix=settings.API_V1_PREFIX)
+app.include_router(gpt_copilot_routes.router, prefix=settings.API_V1_PREFIX)
+
 
 # Future advanced analysis endpoints (commented out until ready for use)
 # app.include_router(trial_routes.future_router, prefix=settings.API_V1_PREFIX)

@@ -1,0 +1,4426 @@
+{
+    "successful_nodes": [
+        {
+            "name": "FieldNode",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "WebLink",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "FieldNodeList",
+            "label": "Schema"
+        },
+        {
+            "name": "array",
+            "label": "DataType"
+        },
+        {
+            "name": "SearchDocument",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "SearchArea",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "SearchPart",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "SearchDocumentList",
+            "label": "Schema"
+        },
+        {
+            "name": "array",
+            "label": "DataType"
+        },
+        {
+            "name": "EnumInfo",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "EnumItem",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "EnumInfoList",
+            "label": "Schema"
+        },
+        {
+            "name": "array",
+            "label": "DataType"
+        },
+        {
+            "name": "GzipStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "StudySize",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DistItem",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ListSizes",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ListSize",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ListSizesList",
+            "label": "Schema"
+        },
+        {
+            "name": "array",
+            "label": "DataType"
+        },
+        {
+            "name": "EnumStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ValueCount",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "FieldStatsType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ENUM",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STRING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DATE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "INTEGER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NUMBER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "BOOLEAN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "StringStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "LongestString",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DateStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "IntegerStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "NumberStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "BooleanStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Version",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "PagedStudies",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Study",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ProtocolSection",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ResultsSection",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "AnnotationSection",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DocumentSection",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DerivedSection",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "IdentificationModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "StatusModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "SponsorCollaboratorsModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "OversightModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DescriptionModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ConditionsModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DesignModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ArmsInterventionsModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "OutcomesModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "EligibilityModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ContactsLocationsModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ReferencesModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "OutcomeMeasuresModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "MoreInfoModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "AnnotationModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "MiscInfoModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "UnpostedAnnotation",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ViolationAnnotation",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "SubmissionTracking",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ModelPredictions",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "BmiLimits",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "EnrollmentInfo",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "BioSpec",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "SeeAlsoLink",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "FirstMcpInfo",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ExpandedAccessTypes",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Intervention",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "SecondaryIdInfo",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "AvailIpd",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "LimitationsAndCaveats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DateStruct",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "SubmissionInfo",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ExpandedAccessInfo",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "AdverseEventsModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ViolationEvent",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ArmGroup",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DesignInfo",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Organization",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "PointOfContact",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "IpdSharingStatementModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "OrgStudyIdInfo",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ResponsibleParty",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "CertainAgreement",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "UnpostedEvent",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Contact",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "PartialDateStruct",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Outcome",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "OutcomeMeasure",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "BaselineCharacteristicsModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Reference",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "ParticipantFlowModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "LargeDocumentModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Location",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Sponsor",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "BrowseModule",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Official",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "BrowseLeaf",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "MaskingBlock",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "EventGroup",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Mesh",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "FlowGroup",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "MeasureAnalysis",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "AdverseEvent",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Retraction",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Denom",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "FlowPeriod",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "MeasureGroup",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "MeasureClass",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "BrowseBranch",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "BaselineMeasure",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "LargeDoc",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DropWithdraw",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "DenomCount",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "EventStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "MeasureCategory",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "FlowMilestone",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "FlowStats",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Measurement",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "Status",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ACTIVE_NOT_RECRUITING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "COMPLETED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ENROLLING_BY_INVITATION",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NOT_YET_RECRUITING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RECRUITING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SUSPENDED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "TERMINATED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "WITHDRAWN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AVAILABLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NO_LONGER_AVAILABLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "TEMPORARILY_NOT_AVAILABLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "APPROVED_FOR_MARKETING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "WITHHELD",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "UNKNOWN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "StudyType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "EXPANDED_ACCESS",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "INTERVENTIONAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OBSERVATIONAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "Phase",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "EARLY_PHASE1",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PHASE1",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PHASE2",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PHASE3",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PHASE4",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "Sex",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "FEMALE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "MALE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ALL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "StandardAge",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CHILD",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ADULT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OLDER_ADULT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SamplingMethod",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PROBABILITY_SAMPLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NON_PROBABILITY_SAMPLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "IpdSharing",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "YES",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NO",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "UNDECIDED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "IpdSharingInfoType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STUDY_PROTOCOL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SAP",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ICF",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CSR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ANALYTIC_CODE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OrgStudyIdType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NIH",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "FDA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "VA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CDC",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AHRQ",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SAMHSA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SecondaryIdType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NIH",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "FDA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "VA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CDC",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AHRQ",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SAMHSA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER_GRANT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "EUDRACT_NUMBER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CTIS",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "REGISTRY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AgencyClass",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NIH",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "FED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER_GOV",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "INDIV",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "INDUSTRY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NETWORK",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AMBIG",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "UNKNOWN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ExpandedAccessStatus",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AVAILABLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NO_LONGER_AVAILABLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "TEMPORARILY_NOT_AVAILABLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "APPROVED_FOR_MARKETING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DateType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ACTUAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ESTIMATED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ResponsiblePartyType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SPONSOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PRINCIPAL_INVESTIGATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SPONSOR_INVESTIGATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DesignAllocation",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RANDOMIZED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NON_RANDOMIZED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "InterventionalAssignment",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SINGLE_GROUP",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PARALLEL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CROSSOVER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "FACTORIAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SEQUENTIAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PrimaryPurpose",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "TREATMENT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PREVENTION",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DIAGNOSTIC",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ECT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SUPPORTIVE_CARE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SCREENING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "HEALTH_SERVICES_RESEARCH",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "BASIC_SCIENCE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DEVICE_FEASIBILITY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ObservationalModel",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "COHORT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CASE_CONTROL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CASE_ONLY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CASE_CROSSOVER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ECOLOGIC_OR_COMMUNITY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "FAMILY_BASED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DEFINED_POPULATION",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NATURAL_HISTORY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DesignTimePerspective",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RETROSPECTIVE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PROSPECTIVE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CROSS_SECTIONAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "BioSpecRetention",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NONE_RETAINED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SAMPLES_WITH_DNA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SAMPLES_WITHOUT_DNA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "EnrollmentType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ACTUAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ESTIMATED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ArmGroupType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "EXPERIMENTAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ACTIVE_COMPARATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PLACEBO_COMPARATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SHAM_COMPARATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NO_INTERVENTION",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "InterventionType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "BEHAVIORAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "BIOLOGICAL",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "COMBINATION_PRODUCT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DEVICE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DIAGNOSTIC_TEST",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DIETARY_SUPPLEMENT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DRUG",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "GENETIC",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PROCEDURE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RADIATION",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ContactRole",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STUDY_CHAIR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STUDY_DIRECTOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PRINCIPAL_INVESTIGATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SUB_INVESTIGATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CONTACT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OfficialRole",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STUDY_CHAIR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STUDY_DIRECTOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PRINCIPAL_INVESTIGATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SUB_INVESTIGATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RecruitmentStatus",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ACTIVE_NOT_RECRUITING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "COMPLETED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ENROLLING_BY_INVITATION",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NOT_YET_RECRUITING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RECRUITING",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SUSPENDED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "TERMINATED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "WITHDRAWN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AVAILABLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ReferenceType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "BACKGROUND",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RESULT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DERIVED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "MeasureParam",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "GEOMETRIC_MEAN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "GEOMETRIC_LEAST_SQUARES_MEAN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "LEAST_SQUARES_MEAN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "LOG_MEAN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "MEAN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "MEDIAN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NUMBER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "COUNT_OF_PARTICIPANTS",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "COUNT_OF_UNITS",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "MeasureDispersionType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NA",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STANDARD_DEVIATION",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STANDARD_ERROR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "INTER_QUARTILE_RANGE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "FULL_RANGE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CONFIDENCE_80",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CONFIDENCE_90",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CONFIDENCE_95",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CONFIDENCE_975",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CONFIDENCE_99",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CONFIDENCE_OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "GEOMETRIC_COEFFICIENT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OutcomeMeasureType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PRIMARY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SECONDARY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER_PRE_SPECIFIED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "POST_HOC",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ReportingStatus",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NOT_POSTED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "POSTED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "EventAssessment",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NON_SYSTEMATIC_ASSESSMENT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SYSTEMATIC_ASSESSMENT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AgreementRestrictionType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "LTE60",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "GT60",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "BrowseLeafRelevance",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "LOW",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "HIGH",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DesignMasking",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NONE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SINGLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "DOUBLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "TRIPLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "QUADRUPLE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "WhoMasked",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PARTICIPANT",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CARE_PROVIDER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "INVESTIGATOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OUTCOMES_ASSESSOR",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "AnalysisDispersionType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STANDARD_DEVIATION",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "STANDARD_ERROR_OF_MEAN",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ConfidenceIntervalNumSides",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ONE_SIDED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "TWO_SIDED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NonInferiorityType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SUPERIORITY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NON_INFERIORITY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "EQUIVALENCE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NON_INFERIORITY_OR_EQUIVALENCE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SUPERIORITY_OR_OTHER",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "NON_INFERIORITY_OR_EQUIVALENCE_LEGACY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "SUPERIORITY_OR_OTHER_LEGACY",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "UnpostedEventType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RESET",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "RELEASE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "UNRELEASE",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ViolationEventType",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "Enum",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "VIOLATION_IDENTIFIED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "CORRECTION_CONFIRMED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "PENALTY_IMPOSED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "ISSUES_IN_LETTER_ADDRESSED_CONFIRMED",
+            "label": "SchemaElement"
+        },
+        {
+            "name": "GeoPoint",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "FieldValuesStatsList",
+            "label": "Schema"
+        },
+        {
+            "name": "array",
+            "label": "DataType"
+        },
+        {
+            "name": "FieldValuesStats",
+            "label": "Schema"
+        },
+        {
+            "name": "StudyList",
+            "label": "Schema"
+        },
+        {
+            "name": "array",
+            "label": "DataType"
+        },
+        {
+            "name": "StudiesCsv",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "StudiesZip",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "StudyFhir",
+            "label": "Schema"
+        },
+        {
+            "name": "object",
+            "label": "DataType"
+        },
+        {
+            "name": "PartialDate",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "DateTimeMinutes",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        },
+        {
+            "name": "errorMessage",
+            "label": "Schema"
+        },
+        {
+            "name": "string",
+            "label": "DataType"
+        }
+    ],
+    "successful_relationships": [],
+    "rejected_entries": [
+        {
+            "from": "FieldNode",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "WebLink",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FieldNodeList",
+            "to": "array",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SearchDocument",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SearchArea",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SearchPart",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SearchDocumentList",
+            "to": "array",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EnumInfo",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EnumItem",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EnumInfoList",
+            "to": "array",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "GzipStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "StudySize",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DistItem",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ListSizes",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ListSize",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ListSizesList",
+            "to": "array",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EnumStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ValueCount",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FieldStatsType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FieldStatsType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "ENUM",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "STRING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DATE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "INTEGER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NUMBER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "BOOLEAN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "StringStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "LongestString",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DateStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "IntegerStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "NumberStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BooleanStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Version",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "PagedStudies",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Study",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ProtocolSection",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ResultsSection",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "AnnotationSection",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DocumentSection",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DerivedSection",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "IdentificationModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "StatusModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SponsorCollaboratorsModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "OversightModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DescriptionModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ConditionsModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DesignModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ArmsInterventionsModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "OutcomesModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EligibilityModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ContactsLocationsModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ReferencesModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "OutcomeMeasuresModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MoreInfoModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "AnnotationModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MiscInfoModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "UnpostedAnnotation",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ViolationAnnotation",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SubmissionTracking",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ModelPredictions",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BmiLimits",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EnrollmentInfo",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BioSpec",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SeeAlsoLink",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FirstMcpInfo",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ExpandedAccessTypes",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Intervention",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SecondaryIdInfo",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "AvailIpd",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "LimitationsAndCaveats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DateStruct",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SubmissionInfo",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ExpandedAccessInfo",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "AdverseEventsModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ViolationEvent",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ArmGroup",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DesignInfo",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Organization",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "PointOfContact",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "IpdSharingStatementModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "OrgStudyIdInfo",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ResponsibleParty",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "CertainAgreement",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "UnpostedEvent",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Contact",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "PartialDateStruct",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Outcome",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "OutcomeMeasure",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BaselineCharacteristicsModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Reference",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ParticipantFlowModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "LargeDocumentModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Location",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Sponsor",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BrowseModule",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Official",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BrowseLeaf",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MaskingBlock",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EventGroup",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Mesh",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FlowGroup",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MeasureAnalysis",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "AdverseEvent",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Retraction",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Denom",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FlowPeriod",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MeasureGroup",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MeasureClass",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BrowseBranch",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BaselineMeasure",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "LargeDoc",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DropWithdraw",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DenomCount",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EventStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MeasureCategory",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FlowMilestone",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FlowStats",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Measurement",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Status",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Status",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "ACTIVE_NOT_RECRUITING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "COMPLETED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ENROLLING_BY_INVITATION",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NOT_YET_RECRUITING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "RECRUITING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SUSPENDED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "TERMINATED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "WITHDRAWN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "AVAILABLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NO_LONGER_AVAILABLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "TEMPORARILY_NOT_AVAILABLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "APPROVED_FOR_MARKETING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "WITHHELD",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "UNKNOWN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "StudyType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "StudyType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "EXPANDED_ACCESS",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "INTERVENTIONAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OBSERVATIONAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Phase",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Phase",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "EARLY_PHASE1",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PHASE1",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PHASE2",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PHASE3",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PHASE4",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Sex",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Sex",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "FEMALE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "MALE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ALL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "StandardAge",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "StandardAge",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "CHILD",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ADULT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OLDER_ADULT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "SamplingMethod",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SamplingMethod",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "PROBABILITY_SAMPLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NON_PROBABILITY_SAMPLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "IpdSharing",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "IpdSharing",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "YES",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NO",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "UNDECIDED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "IpdSharingInfoType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "IpdSharingInfoType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "STUDY_PROTOCOL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SAP",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ICF",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CSR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ANALYTIC_CODE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "OrgStudyIdType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "OrgStudyIdType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NIH",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "FDA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "VA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CDC",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "AHRQ",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SAMHSA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "SecondaryIdType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "SecondaryIdType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NIH",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "FDA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "VA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CDC",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "AHRQ",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SAMHSA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER_GRANT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "EUDRACT_NUMBER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CTIS",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "REGISTRY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "AgencyClass",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "AgencyClass",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NIH",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "FED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER_GOV",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "INDIV",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "INDUSTRY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NETWORK",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "AMBIG",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "UNKNOWN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ExpandedAccessStatus",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ExpandedAccessStatus",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "AVAILABLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NO_LONGER_AVAILABLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "TEMPORARILY_NOT_AVAILABLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "APPROVED_FOR_MARKETING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "DateType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DateType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "ACTUAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ESTIMATED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ResponsiblePartyType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ResponsiblePartyType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "SPONSOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PRINCIPAL_INVESTIGATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SPONSOR_INVESTIGATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "DesignAllocation",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DesignAllocation",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "RANDOMIZED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NON_RANDOMIZED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "InterventionalAssignment",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "InterventionalAssignment",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "SINGLE_GROUP",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PARALLEL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CROSSOVER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "FACTORIAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SEQUENTIAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "PrimaryPurpose",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "PrimaryPurpose",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "TREATMENT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PREVENTION",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DIAGNOSTIC",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ECT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SUPPORTIVE_CARE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SCREENING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "HEALTH_SERVICES_RESEARCH",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "BASIC_SCIENCE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DEVICE_FEASIBILITY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ObservationalModel",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ObservationalModel",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "COHORT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CASE_CONTROL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CASE_ONLY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CASE_CROSSOVER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ECOLOGIC_OR_COMMUNITY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "FAMILY_BASED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DEFINED_POPULATION",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NATURAL_HISTORY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "DesignTimePerspective",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DesignTimePerspective",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "RETROSPECTIVE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PROSPECTIVE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CROSS_SECTIONAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "BioSpecRetention",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BioSpecRetention",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NONE_RETAINED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SAMPLES_WITH_DNA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SAMPLES_WITHOUT_DNA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "EnrollmentType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EnrollmentType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "ACTUAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ESTIMATED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ArmGroupType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ArmGroupType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "EXPERIMENTAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ACTIVE_COMPARATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PLACEBO_COMPARATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SHAM_COMPARATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NO_INTERVENTION",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "InterventionType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "InterventionType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "BEHAVIORAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "BIOLOGICAL",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "COMBINATION_PRODUCT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DEVICE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DIAGNOSTIC_TEST",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DIETARY_SUPPLEMENT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DRUG",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "GENETIC",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PROCEDURE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "RADIATION",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ContactRole",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ContactRole",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "STUDY_CHAIR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "STUDY_DIRECTOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PRINCIPAL_INVESTIGATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SUB_INVESTIGATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CONTACT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "OfficialRole",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "OfficialRole",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "STUDY_CHAIR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "STUDY_DIRECTOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PRINCIPAL_INVESTIGATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SUB_INVESTIGATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "RecruitmentStatus",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "RecruitmentStatus",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "ACTIVE_NOT_RECRUITING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "COMPLETED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ENROLLING_BY_INVITATION",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NOT_YET_RECRUITING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "RECRUITING",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SUSPENDED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "TERMINATED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "WITHDRAWN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "AVAILABLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ReferenceType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ReferenceType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "BACKGROUND",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "RESULT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DERIVED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "MeasureParam",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MeasureParam",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "GEOMETRIC_MEAN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "GEOMETRIC_LEAST_SQUARES_MEAN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "LEAST_SQUARES_MEAN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "LOG_MEAN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "MEAN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "MEDIAN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NUMBER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "COUNT_OF_PARTICIPANTS",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "COUNT_OF_UNITS",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "MeasureDispersionType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "MeasureDispersionType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NA",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "STANDARD_DEVIATION",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "STANDARD_ERROR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "INTER_QUARTILE_RANGE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "FULL_RANGE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CONFIDENCE_80",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CONFIDENCE_90",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CONFIDENCE_95",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CONFIDENCE_975",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CONFIDENCE_99",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CONFIDENCE_OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "GEOMETRIC_COEFFICIENT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "OutcomeMeasureType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "OutcomeMeasureType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "PRIMARY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SECONDARY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER_PRE_SPECIFIED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "POST_HOC",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ReportingStatus",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ReportingStatus",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NOT_POSTED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "POSTED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "EventAssessment",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "EventAssessment",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NON_SYSTEMATIC_ASSESSMENT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SYSTEMATIC_ASSESSMENT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "AgreementRestrictionType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "AgreementRestrictionType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "LTE60",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "GT60",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "BrowseLeafRelevance",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "BrowseLeafRelevance",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "LOW",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "HIGH",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "DesignMasking",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DesignMasking",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "NONE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SINGLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "DOUBLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "TRIPLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "QUADRUPLE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "WhoMasked",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "WhoMasked",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "PARTICIPANT",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CARE_PROVIDER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "INVESTIGATOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OUTCOMES_ASSESSOR",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "AnalysisDispersionType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "AnalysisDispersionType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "STANDARD_DEVIATION",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "STANDARD_ERROR_OF_MEAN",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ConfidenceIntervalNumSides",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ConfidenceIntervalNumSides",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "ONE_SIDED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "TWO_SIDED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "NonInferiorityType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "NonInferiorityType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "SUPERIORITY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NON_INFERIORITY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "EQUIVALENCE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NON_INFERIORITY_OR_EQUIVALENCE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SUPERIORITY_OR_OTHER",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "NON_INFERIORITY_OR_EQUIVALENCE_LEGACY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "SUPERIORITY_OR_OTHER_LEGACY",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "UnpostedEventType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "UnpostedEventType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "RESET",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "RELEASE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "UNRELEASE",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "ViolationEventType",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "ViolationEventType",
+            "to": "Enum",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "Enum",
+            "to": "VIOLATION_IDENTIFIED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "CORRECTION_CONFIRMED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "PENALTY_IMPOSED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "Enum",
+            "to": "ISSUES_IN_LETTER_ADDRESSED_CONFIRMED",
+            "relationship": "HAS_VALUE"
+        },
+        {
+            "from": "GeoPoint",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "FieldValuesStatsList",
+            "to": "array",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "StudyList",
+            "to": "array",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "StudiesCsv",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "StudiesZip",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "StudyFhir",
+            "to": "object",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "PartialDate",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "DateTimeMinutes",
+            "to": "string",
+            "relationship": "CAN_BE"
+        },
+        {
+            "from": "errorMessage",
+            "to": "string",
+            "relationship": "CAN_BE"
+        }
+    ]
+}
